@@ -110,7 +110,7 @@ dns_records = {
         ],
         
         dns.rdatatype.TXT: [
-            encrypted_value.decode('ascii')
+            str(encrypted_value, 'utf-8')
         ],
         
         dns.rdatatype.NS: [
