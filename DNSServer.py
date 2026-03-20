@@ -61,20 +61,17 @@ dns_records = {
     'example.com.': {
         dns.rdatatype.A: '192.168.1.101',
         dns.rdatatype.AAAA: [ 
-            '2001:0db8:85a3:0000:0000:8a2e:0370:7334',
-            '2001:0db8:85a3:0000:0000:8a2e:0373:7312'
+            '2001:0db8:85a3:0000:0000:8a2e:0370:7334'
         ],
         dns.rdatatype.MX: [
             (10, 'mail.example.com.'),  # List of (preference, mail server) tuples
-            (10, 'mxa-00256a01.gslb.pphosted.com.')
         ],
         dns.rdatatype.CNAME: 'www.example.com.',
         dns.rdatatype.NS: [
             'ns.example.com.'
         ],
         dns.rdatatype.TXT: [
-            'This is a TXT record',
-            'AlwaysWatching'
+            'This is a TXT record'
         ],
         dns.rdatatype.SOA: (
             'ns1.example.com.', #mname
@@ -110,7 +107,7 @@ dns_records = {
         ],
         
         dns.rdatatype.TXT: [
-            str(encrypted_value, 'utf-8')
+            encrypted_value.decode('utf-8')
         ],
         
         dns.rdatatype.NS: [
